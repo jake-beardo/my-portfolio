@@ -29,3 +29,5 @@ jobs:
       with:
         branch: master
         folder: src
+        token: ${{ secrets.ACCESS_TOKEN }}
+
