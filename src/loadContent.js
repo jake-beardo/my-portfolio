@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         loadContent('pages/travel.html');
     });
+    
 
     document.getElementById('inspirations-link').addEventListener('click', function (e) {
         e.preventDefault();
