@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "version": "1.0.0",
-    "description": "Jake Beard's Portfolio",
+    "description": "Jake hBeard's Portfolio",
     "main": "index.html",
     "scripts": {
       "start": "live-server src",
