@@ -5,7 +5,7 @@
     "main": "index.html",
     "scripts": {
       "start": "live-server src",
-      "build": "mkdir -p dist && cp index.html dist/" 
+      "build": "cp -R src/* dist/"
     },
     "keywords": [],
     "author": "Your Name",
