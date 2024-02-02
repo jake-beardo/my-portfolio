@@ -44,11 +44,6 @@ img {
     max-height: 70vh;
 }
 
-p {
-    margin-top: 10px;
-    color: black;
-}
-
 .carousel-inner .item {
     height: 700px;
     /* Set a fixed height for your carousel items */
@@ -70,6 +65,11 @@ p {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
     z-index: 1;
+}
+
+/* Hide p text when item is not being hovered */
+.item:not(:hover) p {
+    display: none;
 }
 
 .item:hover p {
