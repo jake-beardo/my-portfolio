@@ -76,6 +76,21 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    const carousel = document.querySelector('.carousel');
+    let scrollValue = 0;
+  
+    function scrollCarousel(e) {
+      if (e.deltaY > 0) {
+        scrollValue += 100;
+      } else {
+        scrollValue -= 100;
+      }
+  
+      carousel.style.transform = `translateY(${scrollValue}px)`;
+    }
+  
+    document.addEventListener('wheel', scrollCarousel);
 });
 
 // Function to expand the card

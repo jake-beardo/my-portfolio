@@ -12,7 +12,7 @@ function destroyGame() {
         }
         game.destroy();
     } catch (e) {
-        console.log(e);
+        console.log("No Game to destroy");
     }
 
 }
