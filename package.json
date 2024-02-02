@@ -4,7 +4,7 @@
     "description": "Jake hBeard's Portfolio",
     "main": "index.html",
     "scripts": {
-      "start": "live-server src",
+      "start": "open index.html",
       "build": "mkdir -p dist && cp -R src dist/"
     },
     "keywords": [],
