@@ -68,6 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         loadContent('pages/game.html');
     });
 
+    document.getElementById('phoebe-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadContent('pages/phoebe.html');
+    });
+
     document.body.addEventListener('click', function (event) {
         var expandedCards = document.querySelectorAll('.card.expanded');
         if (!event.target.closest('.card')) {
