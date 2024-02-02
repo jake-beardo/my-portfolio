@@ -2,6 +2,28 @@ console.log('game.js loaded');
 // NOTE: Originally 640x1000. Other possible sizes: 512x800, 400x625
 var game = new Phaser.Game(400, 625, Phaser.CANVAS, '', { preload: preload, create: create, update: update });
 
+
+function destroyGame() {
+    try {
+        var instructionsElement = document.getElementById("game-instructions");
+
+        if (instructionsElement) {
+            instructionsElement.parentNode.removeChild(instructionsElement);
+        }
+        game.destroy();
+    } catch (e) {
+        console.log(e);
+    }
+
+}
+
+function initGame() {
+    game.boot();
+}
+
+window.initGame = initGame;
+window.destroyGame = destroyGame;
+
 function preload() {
 
     game.load.image('ball', 'images/basketball/images/ball.png');
@@ -92,6 +114,7 @@ function create() {
 
     var instructions = document.createElement("span");
     instructions.innerHTML = "Instructions: Quickly drag the ball to shoot the ball into the hoop!";
+    instructions.id = "game-instructions";  // Set the ID here
     document.body.appendChild(instructions);
 }
 

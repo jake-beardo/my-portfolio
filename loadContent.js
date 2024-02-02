@@ -2,19 +2,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contentContainer = document.getElementById('content-container');
   
+    const executedScripts = new Set();
+
     function loadContent(page) {
+        if (page !== 'pages/game.html') {
+            // Check if destroyGame is available and call it
+            if (typeof window.destroyGame === 'function') {
+                window.destroyGame();
+                executedScripts.clear();
+            }
+        }
         fetch(page)
             .then(response => response.text())
             .then(html => {
                 contentContainer.innerHTML = html;
+                console.log('Content loaded:', page);
                 executeScripts(contentContainer);
             })
             .catch(error => {
                 console.error('Error loading content:', error);
             });
     }
-    
-    const executedScripts = new Set();
+
 
     function executeScripts(container) {
         const scripts = container.querySelectorAll('script');
@@ -40,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('about-link').addEventListener('click', function (e) {
         e.preventDefault();
         loadContent('pages/about.html');
+
     });
 
     document.getElementById('travel-link').addEventListener('click', function (e) {
@@ -49,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('inspirations-link').addEventListener('click', function (e) {
         e.preventDefault();
+        
         loadContent('pages/inspirations.html');
     });
 

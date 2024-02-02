@@ -1,12 +1,32 @@
-<!-- game.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... meta tags and other head content ... -->
-    <!-- ... inline styles ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css"> <!-- Make sure the path to your CSS file is correct -->
+    <title>Basketball</title>
+    <style type="text/css">
+
+				canvas {
+					margin: 0 auto;
+					border: thin solid black;
+				}
+				span {
+					display: block;
+					margin: 30px auto;
+					width: 500px;
+					text-align: center;
+				}
+				h2 {
+					text-align: center;
+				}
+    </style>
 </head>
 <body>
-    <h1>poop</h1>
-    <script id="basketball-script" type="text/javascript" src="js/basketball.js"></script>
+    <div id="game-container" class="game-content">
+        <!-- Your basketball game script goes here -->
+        <script id="basketball-script" type="text/javascript" src="js/basketball.js"></script>
+    </div>
+    
 </body>
 </html>
