@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     const carousel = document.querySelector('.carousel');
     let scrollValue = 0;
   

@@ -1,0 +1,63 @@
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px; /* Add margin to the right */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Media query to show the hamburger on smaller screens */
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        right: 0; /* Align to the right */
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: grid;
+        position: fixed; /* Use fixed positioning */
+        top: 15px; /* Adjust as needed */
+        right: 15px; /* Adjust as needed */
+        cursor: pointer;    }
+}

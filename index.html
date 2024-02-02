@@ -12,19 +12,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css//styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h3>Jake Beard</h3>
-        <nav class="navbar">
-            <ul>
-                <li><a href="pages/about.html" id="about-link">About</a></li>
-                <li><a href="pages/inspirations.html" id="inspirations-link">Inspirations</a></li>
-                <li><a href="pages/travel.html" id="travel-link">Travel</a></li>
-                <li><a href="pages/game.html" id="game-link">Play</a></li>
-            </ul>
-        </nav>
+
+        <div class="navbar">
+            <h3 class="logo">Jake Beard</h3>
+            <div class="menu" id="menu">
+                <a href="pages/about.html" id="about-link">About</a>
+                <a href="pages/inspirations.html" id="inspirations-link">Inspirations</a>
+                <a href="pages/travel.html" id="travel-link">Travel</a>
+                <a href="pages/game.html" id="game-link">Play</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        
     </header>
 
     <div id="content-container"></div>
@@ -37,6 +47,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/navbar.js"></script>
 
 </body>
 </html>
